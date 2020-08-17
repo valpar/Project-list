@@ -1,0 +1,23 @@
+
+<h1>Project list</h1>
+<div class="project-list"
+ *ngFor="let project of projects;
+  let i = index" 
+  [routerLink]="['project',i]"
+  [ngClass]="[project.active ? 'isActive' : 'notActive']">
+    {{ project.name }} <br>
+    <img src="{{ project.picture }}"> <br>
+    <button (click)='onAdditional(project)'>Enter additional info</button>
+    <div *ngIf='project.commentButtonActive'>
+        <input type='text'> 
+    </div>
+    <button (click)='onActive(project)'>
+        <div *ngIf='project.active'>
+            Change to inactive
+        </div>
+        <div *ngIf='!project.active'>
+            Change to active
+        </div>
+        </button>
+                
+  </div>
