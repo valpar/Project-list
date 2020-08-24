@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +23,9 @@ export class ProjectService {
     return this.Projects[i];  
   }
   
+  updateProject(project, i) {
+    this.Projects[i] = project;
+ }
 
 }
 

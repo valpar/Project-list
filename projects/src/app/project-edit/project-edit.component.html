@@ -1,0 +1,11 @@
+<form [formGroup]="projectEditForm" (ngSubmit)="onSubmit(projectEditForm)">
+ <label>{{ 'name' }}</label>    <br>
+ <input formControlName="name" type="text" required><br>  
+ <label>{{ 'description' }}</label>    <br>
+ <input formControlName="description" type="text" required><br>  
+ <label>{{ 'deadline' }}</label>    <br>
+ <input formControlName="deadline" type="text" required><br>  
+ <label>{{ 'picture' }}</label>    <br>
+ <input formControlName="picture" type="text" required><br>  
+    <button>Edit</button>
+</form>  
