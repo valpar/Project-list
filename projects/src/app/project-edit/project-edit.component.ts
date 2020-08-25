@@ -24,12 +24,16 @@ export class ProjectEditComponent implements OnInit {
 
     this.project = this.projectService.getProject(this.id)
 
+    this.editForm();
+  }
+
+  editForm() {
     this.projectEditForm = new FormGroup({
       name: new FormControl(this.project.name),
       description: new FormControl(this.project.description),
       deadline: new FormControl(this.project.deadline),
       picture: new FormControl(this.project.picture)
-    })
+    });
   }
 
   onSubmit(form: FormGroup){

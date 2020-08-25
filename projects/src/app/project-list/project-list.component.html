@@ -11,10 +11,10 @@
         <input type='text'> 
     </div>
     <button (click)='onActive(project)'>
-        <div *ngIf='project.active'>
+        <div class="active" *ngIf='project.active'>
             Change to inactive
         </div>
-        <div *ngIf='!project.active'>
+        <div class="inactive" *ngIf='!project.active'>
             Change to active
         </div>
     </button>
