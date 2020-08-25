@@ -3,10 +3,9 @@
 <div class="project-list"
  *ngFor="let project of projects;
   let i = index" 
-  [routerLink]="['project',i]"
   [ngClass]="[project.active ? 'isActive' : 'notActive']">
     {{ project.name }} <br>
-    <img src="{{ project.picture }}"> <br>
+    <img src="{{ project.picture }}" [routerLink]="['project',i]"> <br>
     <button (click)='onAdditional(project)'>Enter additional info</button>
     <div *ngIf='project.commentButtonActive'>
         <input type='text'> 
